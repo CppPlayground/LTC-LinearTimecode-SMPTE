@@ -5,8 +5,6 @@
 #ifndef LinearTimecode_h
 #define LinearTimecode_h
 
-#include <Arduino.h>
-
 class LinearTimecode {
     private:
         
