@@ -15,15 +15,15 @@ The time code consists of 8 bytes and a fixed sync word at the end. So 10 bytes 
 
 - Which byte does what?
 
-Byte    | Bit     | Meaning
-:---:   |:---:    |:---
-A       | A0 - A3 | Frame number units (0–9)
-B       | A0 - A3 | Frame number tens (0-2)
-C       | A0 - A3 | Seconds number units (0–9)
-D       | A0 - A3 | Seconds number tens (0–5)
-E       | A0 - A3 | Minutes number units (0-9)
-F       | A0 - A3 | Minutes number tens (0-5)
-G       | A0 - A3 | Hours number units (0-9)
-H       | A0 - A3 | Hours number tens (0-2)
-I       | A0 - A7 | Sync word
-J       | A0 - A7 | Sync Word
+Byte    | Bit         | Meaning
+:---:   |:---:        |:---
+A       | `A0` - `A3` | Frame number units (0–9)
+B       | `A0` - `A3` | Frame number tens (0-2)
+C       | `A0` - `A3` | Seconds number units (0–9)
+D       | `A0` - `A3` | Seconds number tens (0–5)
+E       | `A0` - `A3` | Minutes number units (0-9)
+F       | `A0` - `A3` | Minutes number tens (0-5)
+G       | `A0` - `A3` | Hours number units (0-9)
+H       | `A0` - `A3` | Hours number tens (0-2)
+I       | `A0` - `A7` | Sync word
+J       | `A0` - `A7` | Sync Word
