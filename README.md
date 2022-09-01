@@ -56,14 +56,25 @@ const int bitLength = int(oneBit * 1000);
 Now the library just waits for an interrupt. An interrupt occurs when the sine wave crosses 0. Then the library checks the time difference between the two interrupts. A short time between two interrupts means that a 1 bit has arrived, and a long time between two interrupts means that a 0 bit has arrived.
 
 ### How to use the library?
-- Syntax:
+##### Syntax:
+
+- constructor:
 ```ino
-// create a new LinearTimecode class instance (I call it "ltc")
-LinearTimecode ltc(ltc.FRAME_25);
+LinearTimecode::LinearTimecode(frameTypes frameType);
 ```
-Here is some sample code on how to use the library:
+`enum frameType` : { FRAME_23_976, FRAME_24, FRAME_25, NO_DROP_FRAME_29_97, FRAME_30 }
+
 ```ino
-#include
+LinearTimecode::LinearTimecode(const unsigned int frameDuration);
+```
+`const unsigned int frameDuration` : duration
+
+<br>
+
+###### Example:
+```ino
+// create a new LinearTimecode class instance (I'll call it "ltc") with a frame rate of 25 frames
+LinearTimecode ltc(ltc.FRAME_25);
 ```
 
 
