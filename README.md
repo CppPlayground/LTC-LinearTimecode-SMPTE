@@ -103,10 +103,13 @@ void LinearTimecode::onEdgeChange();
 void LinearTimecode::onSync(void (*callback)());
 ```
 ```ino
-void setShortEdgeDuration(const unsigned int min, const unsigned int max)
+void setShortEdgeDuration(const unsigned int min, const unsigned int max);
 ```
 ```ino
-void setLongEdgeDuration(const unsigned int min, const unsigned int max)
+void setLongEdgeDuration(const unsigned int min, const unsigned int max);
+```
+```ino
+void LinearTimecode::setSyncPattern(word pattern);
 ```
 
 ##### Example:
