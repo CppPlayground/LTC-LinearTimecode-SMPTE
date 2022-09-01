@@ -17,13 +17,13 @@ The time code consists of 8 bytes and a fixed sync word at the end. So 10 bytes 
 
 Byte    | Bit | Meaning
 :---:   |:---:|:---
-A       |A0 - A3 | Frame number units (0–9)
-B       | | Frame number tens (0-2)
-C       | | Seconds number units (0–9)
-D       | | Seconds number tens (0–5)
-E       |
-F       |
-G       |
-H       |
-I       |
-J       |
+A       |A0 - A3| Frame number units (0–9)
+B       |A0 - A3| Frame number tens (0-2)
+C       |A0 - A3| Seconds number units (0–9)
+D       |A0 - A3| Seconds number tens (0–5)
+E       |A0 - A3
+F       |A0 - A3
+G       |A0 - A3
+H       |A0 - A3
+I       |A0 - A7
+J       |A0 - A7
