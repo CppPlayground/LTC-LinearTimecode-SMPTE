@@ -66,9 +66,10 @@ Now the library just waits for an interrupt. An interrupt occurs when the sine w
 ----
 
 ### How to use the library?
-##### Syntax:
+#### Syntax:
 
-- constructor:
+###### constructor:
+
 ```ino
 LinearTimecode::LinearTimecode(LinearTimecode::frameTypes frameType);
 ```
@@ -81,7 +82,8 @@ LinearTimecode::LinearTimecode(const unsigned int frameDuration);
 
 <br>
 
-- methodes:
+###### methodes:
+
 ```ino
 const unsigned int LinearTimecode::getBitLength();
 ```
@@ -122,7 +124,7 @@ void setLongEdgeDuration(const unsigned int min, const unsigned int max);
 void LinearTimecode::setSyncPattern(word pattern);
 ```
 
-##### Example:
+#### Example:
 ```ino
 // create a new LinearTimecode class instance (I'll call it "ltc") with a frame rate of 25 frames
 LinearTimecode ltc(ltc.FRAME_25);
