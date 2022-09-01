@@ -60,7 +60,7 @@ Now the library just waits for an interrupt. An interrupt occurs when the sine w
 
 - constructor:
 ```ino
-LinearTimecode::LinearTimecode(frameTypes frameType);
+LinearTimecode::LinearTimecode(LinearTimecode::frameTypes frameType);
 ```
 `enum frameType` : { FRAME_23_976, FRAME_24, FRAME_25, NO_DROP_FRAME_29_97, FRAME_30 }
 
@@ -71,7 +71,45 @@ LinearTimecode::LinearTimecode(const unsigned int frameDuration);
 
 <br>
 
-###### Example:
+- methodes:
+```ino
+const unsigned int LinearTimecode::getBitLength();
+```
+```ino
+uint8_t LinearTimecode::getByteBuffer(const unsigned int index);
+```
+```ino
+float LinearTimecode::getFramerate();
+```
+```ino
+int LinearTimecode::getFrames();
+```
+```ino
+int LinearTimecode::getSeconds();
+```
+```ino
+int LinearTimecode::getMinutes();
+```
+```ino
+int LinearTimecode::getHours();
+```
+```ino
+String getTimecode(LinearTimecode::formats format);
+```
+```ino
+void LinearTimecode::onEdgeChange();
+```
+```ino
+void LinearTimecode::onSync(void (*callback)());
+```
+```ino
+void setShortEdgeDuration(const unsigned int min, const unsigned int max)
+```
+```ino
+void setLongEdgeDuration(const unsigned int min, const unsigned int max)
+```
+
+##### Example:
 ```ino
 // create a new LinearTimecode class instance (I'll call it "ltc") with a frame rate of 25 frames
 LinearTimecode ltc(ltc.FRAME_25);
