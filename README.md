@@ -31,11 +31,11 @@ J       | `A0` - `A7` |               | Sync Word
 
 ### How does the library decode the timecode?
 First, there are different timecode standards, which differ in the number of frames or the length of a frame as you can see on the [elteesee](https://elteesee.pehrhovey.net) website.
-- 23.976 F
-- 24 F
-- 25 F
-- 29.97ndf (no drop frame)
-- 30 F
+> 23.976 F <br>
+> 24 F <br>
+> 25 F <br>
+> 29.97ndf (no drop frame) <br>
+> 30 F
 
 To calculate how long one bit lasts, we need to do a bit of math:
 
@@ -56,8 +56,12 @@ const int bitLength = int(oneBit * 1000);
 Now the library just waits for an interrupt. An interrupt occurs when the sine wave crosses 0. Then the library checks the time difference between the two interrupts. A short time between two interrupts means that a 1 bit has arrived, and a long time between two interrupts means that a 0 bit has arrived.
 
 ### How to use the library?
+- Syntax:
+```ino
+// create a new LinearTimecode class instance (I call it "ltc")
+LinearTimecode ltc(ltc.FRAME_25);
+```
 Here is some sample code on how to use the library:
-
 ```ino
 #include
 ```
