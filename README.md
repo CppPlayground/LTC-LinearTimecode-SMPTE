@@ -37,6 +37,24 @@ First, there are different timecode standards, which differ in the number of fra
 - 29.97ndf (no drop frame)
 - 30 F
 
+To calculate how long one bit lasts, we need to do a bit of math:
+
+```ino
+// convert framerate to ms
+float framerate = 25.00;
+float ms = 1000 / framerate;
+
+// now calculate how long one bit is
+// a frame consists of 80 bits
+// this gives us back how long one bit is in ms
+float oneBit = ms / 80;
+
+// convert ms to µs and cast to int and we have the bit length in µs
+const int bitLength = int(oneBit * 1000);
+```
+
+Now the library just waits for an interrupt. An interrupt occurs when the sine wave crosses 0. Then the library checks the time difference between the two interrupts. A short time between two interrupts means that a 1 bit has arrived, and a long time between two interrupts means that a 0 bit has arrived.
+
 ### How to use the library?
 Here is some sample code on how to use the library:
 
