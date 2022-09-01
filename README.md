@@ -8,6 +8,7 @@ Use this library to decode linear timecodes. You can generate such timecodes for
 
 ### How does LTC work?
 The time code consists of 8 bytes and a fixed sync word at the end. So 10 bytes in total. The fixed sync word at the end is used to tell the decoder that the sequence has ended.
+> A long bit period corresponds to a 0 bit <br> A double short bit period corresponds to a 1 bit
 
 - This is an example for one frame in the timecode:
 
