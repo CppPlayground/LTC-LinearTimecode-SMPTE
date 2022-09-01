@@ -9,12 +9,12 @@ Use this library to decode linear timecodes. You can generate such timecodes for
 ### How does LTC work?
 The time code consists of 8 bytes and a fixed sync word at the end. So 10 bytes in total. The fixed sync word at the end is used to tell the decoder that the sequence has ended.
 
-This is an example for one frame in the timecode:
+- This is an example for one frame in the timecode:
 
 ![signwave](https://user-images.githubusercontent.com/62719703/187992274-4ab05553-c9b8-472d-beda-67c769e59c40.svg)
 
-Which byte does what?
+- Which byte does what?
 
-Byte    | A | B | C | D | E | F | G | H | I | J
----     |---|---|---|---|---|---|---|---|---|---
-Meaning |
+Byte    | Meaning
+:---:   |:---
+A       |
