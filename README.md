@@ -28,3 +28,26 @@ G       | `A0` - `A3` | `-X:--:--.--` | Hours number units (0-9)
 H       | `A0` - `A3` | `X-:--:--.--` | Hours number tens (0-2)    
 I       | `A0` - `A7` |               | Sync word                  
 J       | `A0` - `A7` |               | Sync Word                  
+
+### How does the library decode the timecode?
+First, there are different timecode standards, which differ in the number of frames or the length of a frame as you can see on the [elteesee](https://elteesee.pehrhovey.net) website.
+- 23.976 F
+- 24 F
+- 25 F
+- 29.97ndf (no drop frame)
+- 30 F
+
+### How to use the library?
+Here is some sample code on how to use the library:
+
+```ino
+#include
+```
+
+
+
+
+
+
+
+
