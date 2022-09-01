@@ -15,12 +15,12 @@ The time code consists of 8 bytes and a fixed sync word at the end. So 10 bytes 
 
 - Which byte does what?
 
-Byte    | Meaning
-:---:   |:---
-A       | Frame number units (0–9)
-B       | Frame number tens (0-2)
-C       | Seconds number units (0–9)
-D       | Seconds number tens (0–5)
+Byte    | Bit | Meaning
+:---:   |:---:|:---
+A       |A0 - A3 | Frame number units (0–9)
+B       | | Frame number tens (0-2)
+C       | | Seconds number units (0–9)
+D       | | Seconds number tens (0–5)
 E       |
 F       |
 G       |
