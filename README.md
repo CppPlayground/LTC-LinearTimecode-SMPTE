@@ -3,7 +3,7 @@ A LinearTimecode library for [Arduino.cc](https://www.arduino.cc)
 
 Use this library to decode linear timecodes. You can generate such timecodes for example on the [elteesee](https://elteesee.pehrhovey.net) website made by [pehrhovey](http://pehrhovey.net/blog/about/). You can find more references in [this wikipedia](https://en.wikipedia.org/wiki/Linear_timecode) article.
 
-> Skip to [How to use the library]()
+> Skip to [How to use the library](#how-to-use-the-library)
 
 ----
 
