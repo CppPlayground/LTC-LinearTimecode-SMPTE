@@ -20,9 +20,11 @@ The time code consists of 8 bytes and a fixed sync word at the end. So 10 bytes 
 
 ####  Example for one frame
 
+> This example shows the timecode 00:00:00.00
+
 ![signwave](https://user-images.githubusercontent.com/62719703/187992274-4ab05553-c9b8-472d-beda-67c769e59c40.svg)
 
-#### Which byte does what
+#### Which byte does what?
 
 Byte    | Bit         | Visuel        | Meaning                    
 :---:   |:---:        |:---:          |:---                        
@@ -52,7 +54,7 @@ First, there are different timecode standards, which differ in the number of fra
 
 #### Calculate one bit lenght
 
-To calculate how long one bit lasts, we need to do a bit of math:
+To calculate how long one bit lasts, we need to do a bit of math. Got it? A *bit* of math? Nahh lets go on 😅:
 
 ```ino
 // convert framerate to ms
