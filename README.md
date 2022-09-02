@@ -22,7 +22,9 @@ The time code consists of 8 bytes and a fixed sync word at the end. So 10 bytes 
 
 > This example shows the timecode `00:00:00.00`
 
-![signwave](https://github.com/Mqxx/LTC-LinearTimecode-SMPTE/blob/main/assets/signwave.svg)
+![signwave](https://github.com/Mqxx/LTC-LinearTimecode-SMPTE/blob/main/assets/signwave.svg "Signwave")
+
+> [Raw image](https://raw.githubusercontent.com/Mqxx/LTC-LinearTimecode-SMPTE/main/assets/signwave.svg)
 
 #### Which byte does what?
 
