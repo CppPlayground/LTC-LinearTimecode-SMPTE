@@ -26,18 +26,18 @@ The time code consists of 8 bytes and a fixed sync word at the end. So 10 bytes 
 
 #### Which byte does what?
 
-Byte    | Bit         | Visuel        | Meaning                    
-:---:   |:---:        |:---:          |:---                        
-A       | `A0` - `A3` | `--:--:--.-X` | Frame number units (0–9)   
-B       | `A0` - `A3` | `--:--:--.X-` | Frame number tens (0-2)    
-C       | `A0` - `A3` | `--:--:-X.--` | Seconds number units (0–9) 
-D       | `A0` - `A3` | `--:--:X-.--` | Seconds number tens (0–5)  
-E       | `A0` - `A3` | `--:-X:--.--` | Minutes number units (0-9) 
-F       | `A0` - `A3` | `--:X-:--.--` | Minutes number tens (0-5)  
-G       | `A0` - `A3` | `-X:--:--.--` | Hours number units (0-9)   
-H       | `A0` - `A3` | `X-:--:--.--` | Hours number tens (0-2)    
-I       | `A0` - `A7` |               | Sync word                  
-J       | `A0` - `A7` |               | Sync Word                  
+Byte    | Bit       | Visuel        | Meaning                    
+:---:   |:---:      |:---:          |:---                        
+A       | `0` - `3` | `--:--:--.-X` | Frame number units (0–9)   
+B       | `0` - `3` | `--:--:--.X-` | Frame number tens (0-2)    
+C       | `0` - `3` | `--:--:-X.--` | Seconds number units (0–9) 
+D       | `0` - `3` | `--:--:X-.--` | Seconds number tens (0–5)  
+E       | `0` - `3` | `--:-X:--.--` | Minutes number units (0-9) 
+F       | `0` - `3` | `--:X-:--.--` | Minutes number tens (0-5)  
+G       | `0` - `3` | `-X:--:--.--` | Hours number units (0-9)   
+H       | `0` - `3` | `X-:--:--.--` | Hours number tens (0-2)    
+I       | `0` - `7` |               | Sync word                  
+J       | `0` - `7` |               | Sync Word                  
 
 ----
 
