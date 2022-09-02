@@ -149,7 +149,7 @@ const int LinearTimecode::getHours();
 <br>
 
 ```ino
-String getTimecode(LinearTimecode::formats format);
+String LinearTimecode::getTimecode(LinearTimecode::formats format);
 ```
 `enum format` : `{ FORMAT_DOT, FORMAT_COLON, FORMAT_DOT_COLON, FORMAT_SPACE }`
 > Returns the timecode in a string format<br>
@@ -178,7 +178,7 @@ void LinearTimecode::onSync(void (*callback)());
 <br>
 
 ```ino
-void setShortEdgeDuration(const unsigned int min, const unsigned int max);
+void LinearTimecode::setShortEdgeDuration(const unsigned int min, const unsigned int max);
 ```
 `const unsigned int min` : `the minimum short edge duration`<br>
 `const unsigned int max` : `the maximum short edge duration`
@@ -187,7 +187,7 @@ void setShortEdgeDuration(const unsigned int min, const unsigned int max);
 <br>
 
 ```ino
-void setLongEdgeDuration(const unsigned int min, const unsigned int max);
+void LinearTimecode::setLongEdgeDuration(const unsigned int min, const unsigned int max);
 ```
 `const unsigned int min` : `the minimum long edge duration`<br>
 `const unsigned int max` : `the maximum long edge duration`
