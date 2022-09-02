@@ -97,7 +97,7 @@ LinearTimecode::LinearTimecode(const unsigned int frameDuration);
 ###### methodes
 
 ```ino
-const unsigned int LinearTimecode::getBitLength();
+const int LinearTimecode::getBitLength();
 ```
 > Returns the bit length of one bit.
 
@@ -106,6 +106,7 @@ const unsigned int LinearTimecode::getBitLength();
 ```ino
 uint8_t LinearTimecode::getByteBuffer(const unsigned int index);
 ```
+`const unsigned int index` : `index`
 > Returns the byte buffer at the specified index.
 
 <br>
@@ -118,39 +119,79 @@ float LinearTimecode::getFramerate();
 <br>
 
 ```ino
-const unsigned int LinearTimecode::getFrames();
+const int LinearTimecode::getFrames();
 ```
 > Returns the current frame
 
 <br>
 
 ```ino
-int LinearTimecode::getSeconds();
+const int LinearTimecode::getSeconds();
 ```
+> Returns the current second
+
+<br>
+
 ```ino
-int LinearTimecode::getMinutes();
+cpnst int LinearTimecode::getMinutes();
 ```
+> Returns the current minute
+
+<br>
+
 ```ino
-int LinearTimecode::getHours();
+const int LinearTimecode::getHours();
 ```
+> Returns the current hour
+
+<br>
+
 ```ino
 String getTimecode(LinearTimecode::formats format);
 ```
+`enum format` : `{ FORMAT_DOT, FORMAT_COLON, FORMAT_DOT_COLON, FORMAT_SPACE }`
+> Returns the timecode in a string format
+
+<br>
+
 ```ino
 void LinearTimecode::onEdgeChange();
 ```
+> Needs to be executed on an interrupt change on the audio pin
+
+<br>
+
 ```ino
 void LinearTimecode::onSync(void (*callback)());
 ```
+`void (*callback)()` : `function to execute`
+> Gets called when the sync word is detected
+
+<br>
+
 ```ino
 void setShortEdgeDuration(const unsigned int min, const unsigned int max);
 ```
+`const unsigned int min` : `the minimum short edge duration`
+`const unsigned int max` : `the maximum short edge duration`
+> Set the minimum and maximum short edge duration
+
+<br>
+
 ```ino
 void setLongEdgeDuration(const unsigned int min, const unsigned int max);
 ```
+`const unsigned int min` : `the minimum long edge duration`
+`const unsigned int max` : `the maximum long edge duration`
+> Set the minimum and maximum long edge duration
+
+<br>
+
 ```ino
 void LinearTimecode::setSyncPattern(word pattern);
 ```
+`word pattern` : `sync pattern`
+> Set the sync pattern
 
 #### Example
 
