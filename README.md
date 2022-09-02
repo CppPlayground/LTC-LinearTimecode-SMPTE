@@ -213,7 +213,7 @@ void LinearTimecode::setSyncPattern(word pattern);
 #define AUDIO_IN 2
 
 // Create a new LinearTimecode class instance (I'll call it "ltc") with a frame rate of 25 frames
-LinearTimecode ltc(ltc.FRAME_25);
+LinearTimecode ltc(ltc.FRAME_30);
 
 // the setup function
 void setup() {
