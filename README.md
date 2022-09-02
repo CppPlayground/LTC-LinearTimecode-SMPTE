@@ -208,7 +208,7 @@ void LinearTimecode::setSyncPattern(word pattern);
 ```ino
 // include
 // include the libary
-#include "lib/LinearTimecode.h"
+#include <LinearTimecode.h>
 
 // define
 // the audio in pin needs to be an change intrrupt pin!
