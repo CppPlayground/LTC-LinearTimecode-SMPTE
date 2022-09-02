@@ -3,6 +3,7 @@ A LinearTimecode library for [Arduino.cc](https://www.arduino.cc)
 
 Use this library to decode linear timecodes. You can generate such timecodes for example on the [elteesee](https://elteesee.pehrhovey.net) website made by [pehrhovey](http://pehrhovey.net/blog/about/). You can find more references in [this wikipedia](https://en.wikipedia.org/wiki/Linear_timecode) article.
 
+> Skip to [Wiring diagram](#wiring-diagram)<br>
 > Skip to [How to use the library](#how-to-use-the-library)
 
 ----
@@ -71,6 +72,10 @@ const int bitLength = int(oneBit * 1000);
 ```
 
 Now the library just waits for an interrupt. An interrupt occurs when the sine wave crosses 0. Then the library checks the time difference between the two interrupts. A short time between two interrupts means that a 1 bit has arrived, and a long time between two interrupts means that a 0 bit has arrived.
+
+----
+
+### Wiring diagram
 
 ----
 
@@ -150,7 +155,13 @@ const int LinearTimecode::getHours();
 String getTimecode(LinearTimecode::formats format);
 ```
 `enum format` : `{ FORMAT_DOT, FORMAT_COLON, FORMAT_DOT_COLON, FORMAT_SPACE }`
-> Returns the timecode in a string format
+> Returns the timecode in a string format<br>
+> Format              | Visual
+> :---                |:---:
+> `FORMAT_DOT`        | `HH.MM.SS.FF`
+> `FORMAT_COLON`      | `HH:MM:SS:FF`
+> `FORMAT_DOT_COLON`  | `HH:MM:SS.FF`
+> `FORMAT_SPACE`      | `HH MM SS FF`
 
 <br>
 
@@ -172,7 +183,7 @@ void LinearTimecode::onSync(void (*callback)());
 ```ino
 void setShortEdgeDuration(const unsigned int min, const unsigned int max);
 ```
-`const unsigned int min` : `the minimum short edge duration`
+`const unsigned int min` : `the minimum short edge duration`<br>
 `const unsigned int max` : `the maximum short edge duration`
 > Set the minimum and maximum duration of the short edge
 
@@ -181,7 +192,7 @@ void setShortEdgeDuration(const unsigned int min, const unsigned int max);
 ```ino
 void setLongEdgeDuration(const unsigned int min, const unsigned int max);
 ```
-`const unsigned int min` : `the minimum long edge duration`
+`const unsigned int min` : `the minimum long edge duration`<br>
 `const unsigned int max` : `the maximum long edge duration`
 > Set the minimum and maximum duration of the long edge
 
@@ -198,8 +209,40 @@ void LinearTimecode::setSyncPattern(word pattern);
 #### Example
 
 ```ino
-// create a new LinearTimecode class instance (I'll call it "ltc") with a frame rate of 25 frames
+// include
+// include the libary
+#include "lib/LinearTimecode.h"
+
+// define
+// the audio in pin needs to be an change intrrupt pin!
+#define AUDIO_IN 2
+
+// Create a new LinearTimecode class instance (I'll call it "ltc") with a frame rate of 25 frames
 LinearTimecode ltc(ltc.FRAME_25);
+
+// the setup function
+void setup() {
+
+  // attach the interrupt pin to pin 2
+  attachInterrupt(2, [](){
+    
+    // call the onEdgeChange() method of your class instance
+    // this needs to be in a lambda function!
+    ltc.onEdgeChange();
+  }, CHANGE);
+  
+  // call the onSync() method of your class instance
+  ltc.onSync([](){
+    
+    // print the result in the console
+    Serial.println(ltc.getTimecode(ltc.FORMAT_DOT_COLON));
+  });
+}
+
+void loop() {
+
+}
+
 ```
 
 
