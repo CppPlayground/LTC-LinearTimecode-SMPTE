@@ -187,7 +187,7 @@ float LinearTimecode::getFramerate() {
 };
 
 // get the bit length as int in us
-int LinearTimecode::getBitLength() {
+const int LinearTimecode::getBitLength() {
     return this -> _bitLength;
 };
 
@@ -219,22 +219,22 @@ String LinearTimecode::getTimecode(LinearTimecode::formats format) {
 }
 
 // get the frames
-int LinearTimecode::getFrames() {
+const int LinearTimecode::getFrames() {
     return this -> _timeFrames;
 }
 
 // get the seconds
-int LinearTimecode::getSeconds() {
+const int LinearTimecode::getSeconds() {
     return this -> _timeSeconds;
 }
 
 // get the minutes
-int LinearTimecode::getMinutes() {
+const int LinearTimecode::getMinutes() {
     return this -> _timeMinutes;
 }
 
 // get the hours
-int LinearTimecode::getHours() {
+const int LinearTimecode::getHours() {
     return this -> _timeHours;
 }
 
@@ -259,3 +259,5 @@ void LinearTimecode::setLongEdgeDuration(const unsigned int min, const unsigned 
 void LinearTimecode::onSync(void (*callback)(void)) {
     this -> _onSync = callback;
 }
+
+
