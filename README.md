@@ -133,7 +133,7 @@ const int LinearTimecode::getSeconds();
 <br>
 
 ```ino
-cpnst int LinearTimecode::getMinutes();
+const int LinearTimecode::getMinutes();
 ```
 > Returns the current minute
 
