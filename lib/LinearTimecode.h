@@ -83,22 +83,22 @@ class LinearTimecode {
         float getFramerate();
         
         // get the bit length as int
-        int getBitLength();
+        const int getBitLength();
         
         // get timecode as string with a format
         String getTimecode(formats format);
         
         // get the frames as int
-        int getFrames();
+        const int getFrames();
         
         // get the seconds as int
-        int getSeconds();
+        const int getSeconds();
         
         // get the minutes as int
-        int getMinutes();
+        const int getMinutes();
         
         // get the hours as int
-        int getHours();
+        const int getHours();
         
         // set the sync pattern
         void setSyncPattern(const word pattern);
