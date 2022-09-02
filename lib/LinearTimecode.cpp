@@ -51,7 +51,7 @@ LinearTimecode::LinearTimecode(frameTypes frameType) {
     this -> _bitLength = int(((1000 / this -> _framerate) / 80) * 1000);
     
     // initialize
-    _init();
+    this -> _init();
 }
 
 // constructor (frameDuration)
@@ -63,7 +63,7 @@ LinearTimecode::LinearTimecode(const unsigned int frameDuration) {
     this -> _bitLength = int((frameDuration / 80) * 1000);
     
     // initialize
-    _init();
+    this -> _init();
 }
 
 // initialize
@@ -100,15 +100,15 @@ void LinearTimecode::_init() {
     this -> _timeFrames = 0;
     
     // calculate the bit length of one third bit
-    const int quaterBitLength = int(this -> _bitLength / 3);
+    const int thirdBitLength = int(this -> _bitLength / 3);
     
     // set short edge duration
-    this -> _shortEdgeDurationMin = quaterBitLength * 1;
-    this -> _shortEdgeDurationMax = quaterBitLength * 2;
+    this -> _shortEdgeDurationMin = thirdBitLength * 1;
+    this -> _shortEdgeDurationMax = thirdBitLength * 2;
     
     // set long edge duration (+ 1 so they don't overlap)
-    this -> _longEdgeDurationMin = quaterBitLength * 2 + 1;
-    this -> _longEdgeDurationMin = quaterBitLength * 3;
+    this -> _longEdgeDurationMin = thirdBitLength * 2 + 1;
+    this -> _longEdgeDurationMin = thirdBitLength * 3;
 }
 
 // shift each bit in frameBuffers one to the right
