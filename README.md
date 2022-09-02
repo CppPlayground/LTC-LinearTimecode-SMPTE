@@ -3,7 +3,6 @@ A LinearTimecode library for [Arduino.cc](https://www.arduino.cc)
 
 Use this library to decode linear timecodes. You can generate such timecodes for example on the [elteesee](https://elteesee.pehrhovey.net) website made by [pehrhovey](http://pehrhovey.net/blog/about/). You can find more references in [this wikipedia](https://en.wikipedia.org/wiki/Linear_timecode) article.
 
-> Skip to [Wiring diagram](#wiring-diagram)<br>
 > Skip to [How to use the library](#how-to-use-the-library)
 
 ----
@@ -72,10 +71,6 @@ const int bitLength = int(oneBit * 1000);
 ```
 
 Now the library just waits for an interrupt. An interrupt occurs when the sine wave crosses 0. Then the library checks the time difference between the two interrupts. A short time between two interrupts means that a 1 bit has arrived, and a long time between two interrupts means that a 0 bit has arrived.
-
-----
-
-### Wiring diagram
 
 ----
 
