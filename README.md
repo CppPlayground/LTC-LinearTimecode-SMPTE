@@ -83,12 +83,14 @@ Now the library just waits for an interrupt. An interrupt occurs when the sine w
 ```ino
 LinearTimecode::LinearTimecode(LinearTimecode::frameTypes frameType);
 ```
-`enum frameType` : { FRAME_23_976, FRAME_24, FRAME_25, NO_DROP_FRAME_29_97, FRAME_30 }
+`enum frameType` : `{ FRAME_23_976, FRAME_24, FRAME_25, NO_DROP_FRAME_29_97, FRAME_30 }`
+
+<br>
 
 ```ino
 LinearTimecode::LinearTimecode(const unsigned int frameDuration);
 ```
-`const unsigned int frameDuration` : duration
+`const unsigned int frameDuration` : `duration`
 
 <br>
 
@@ -97,15 +99,31 @@ LinearTimecode::LinearTimecode(const unsigned int frameDuration);
 ```ino
 const unsigned int LinearTimecode::getBitLength();
 ```
+> Returns the bit length of one bit.
+
+<br>
+
 ```ino
 uint8_t LinearTimecode::getByteBuffer(const unsigned int index);
 ```
+> Returns the byte buffer at the specified index.
+
+<br>
+
 ```ino
 float LinearTimecode::getFramerate();
 ```
+> Returns the float framerate that was set
+
+<br>
+
 ```ino
-int LinearTimecode::getFrames();
+const unsigned int LinearTimecode::getFrames();
 ```
+> Returns the current frame
+
+<br>
+
 ```ino
 int LinearTimecode::getSeconds();
 ```
