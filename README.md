@@ -41,6 +41,8 @@ H       | `0` - `3` | `X-:--:--.--` | Hours number tens (0-2)
 I       | `0` - `7` |               | Sync word                  
 J       | `0` - `7` |               | Sync Word                  
 
+> Binary decimal numbers [wiki](https://en.wikipedia.org/wiki/Binary_number)
+
 ----
 
 ### How does the library decode the timecode?
