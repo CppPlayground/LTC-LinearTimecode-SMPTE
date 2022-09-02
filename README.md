@@ -114,7 +114,7 @@ uint8_t LinearTimecode::getByteBuffer(const unsigned int index);
 ```ino
 float LinearTimecode::getFramerate();
 ```
-> Returns the float framerate that was set
+> Returns the set frame rate as a floating point number
 
 <br>
 
@@ -165,7 +165,7 @@ void LinearTimecode::onEdgeChange();
 void LinearTimecode::onSync(void (*callback)());
 ```
 `void (*callback)()` : `function to execute`
-> Gets called when the sync word is detected
+> Gets called when the sync pattern is detected
 
 <br>
 
@@ -174,7 +174,7 @@ void setShortEdgeDuration(const unsigned int min, const unsigned int max);
 ```
 `const unsigned int min` : `the minimum short edge duration`
 `const unsigned int max` : `the maximum short edge duration`
-> Set the minimum and maximum short edge duration
+> Set the minimum and maximum duration of the short edge
 
 <br>
 
@@ -183,7 +183,7 @@ void setLongEdgeDuration(const unsigned int min, const unsigned int max);
 ```
 `const unsigned int min` : `the minimum long edge duration`
 `const unsigned int max` : `the maximum long edge duration`
-> Set the minimum and maximum long edge duration
+> Set the minimum and maximum duration of the long edge
 
 <br>
 
@@ -192,6 +192,8 @@ void LinearTimecode::setSyncPattern(word pattern);
 ```
 `word pattern` : `sync pattern`
 > Set the sync pattern
+
+<br>
 
 #### Example
 
