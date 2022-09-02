@@ -219,6 +219,8 @@ LinearTimecode ltc(ltc.FRAME_30);
 
 // the setup function
 void setup() {
+  // begin serial
+  Serial.begin(115200);
 
   // attach the interrupt pin to pin 2
   attachInterrupt(2, [](){
