@@ -54,7 +54,7 @@ class LinearTimecode {
     public:
         
         // format types
-        const enum formats {
+        enum formats {
             FORMAT_DOT,
             FORMAT_COLON,
             FORMAT_DOT_COLON,
@@ -62,7 +62,7 @@ class LinearTimecode {
         };
         
         // frame types
-        const enum frameTypes {
+        enum frameTypes {
             FRAME_23_976,
             FRAME_24,
             FRAME_25,
@@ -77,43 +77,43 @@ class LinearTimecode {
         LinearTimecode::LinearTimecode(const unsigned int frameDuration);
         
         // get the current byte buffer
-        uint8_t getByteBuffer(const unsigned int index);
+        uint8_t LinearTimecode::getByteBuffer(const unsigned int index);
         
         // get the framerate as float
-        float getFramerate();
+        float LinearTimecode::getFramerate();
         
         // get the bit length as int
-        const int getBitLength();
+        const int LinearTimecode::getBitLength();
         
         // get timecode as string with a format
-        String getTimecode(formats format);
+        String LinearTimecode::getTimecode(formats format);
         
         // get the frames as int
-        const int getFrames();
+        const int LinearTimecode::getFrames();
         
         // get the seconds as int
-        const int getSeconds();
+        const int LinearTimecode::getSeconds();
         
         // get the minutes as int
-        const int getMinutes();
+        const int LinearTimecode::getMinutes();
         
         // get the hours as int
-        const int getHours();
+        const int LinearTimecode::getHours();
         
         // set the sync pattern
-        void setSyncPattern(const word pattern);
+        void LinearTimecode::setSyncPattern(const word pattern);
         
         // set short edge duration
-        void setShortEdgeDuration(const unsigned int min, const unsigned int max);
+        void LinearTimecode::setShortEdgeDuration(const unsigned int min, const unsigned int max);
         
         // set long edge duration
-        void setLongEdgeDuration(const unsigned int min, const unsigned int max);
+        void LinearTimecode::setLongEdgeDuration(const unsigned int min, const unsigned int max);
         
         // call on interrupt change
-        void onEdgeChange();
+        void LinearTimecode::onEdgeChange();
         
         // gets called on synced pattern
-        void onSync(void (*callback)(void));
+        void LinearTimecode::onSync(void (*callback)(void));
 };
 
 #endif
