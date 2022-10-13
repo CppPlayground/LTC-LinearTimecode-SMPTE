@@ -207,6 +207,8 @@ void LinearTimecode::setSyncPattern(word pattern);
 
 #### Example
 
+###### code
+
 ```ino
 // include
 // include the libary
