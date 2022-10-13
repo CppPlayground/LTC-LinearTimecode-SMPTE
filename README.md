@@ -39,7 +39,7 @@ F       | `0` - `3` | `--:X-:--.--` | Minutes number tens (0-5)
 G       | `0` - `3` | `-X:--:--.--` | Hours number units (0-9)   
 H       | `0` - `3` | `X-:--:--.--` | Hours number tens (0-2)    
 I       | `0` - `7` |               | Sync word                  
-J       | `0` - `7` |               | Sync Word                  
+J       | `0` - `7` |               | Sync word                  
 
 > Binary decimal numbers [wiki](https://en.wikipedia.org/wiki/Binary_number)
 
