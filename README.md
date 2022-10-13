@@ -9,7 +9,7 @@ Use this library to decode linear timecodes. You can generate such timecodes for
 
 ### What is LTC?
 
-"LTC" stands for "Linear Timecode" and is used to encode/decode timecode data in an audio signal. Basically you have an audio signal that runs synchronously with the music or the film and in which the timecode is stored as a bit sequence. You can store the time and date in a timecode, but I'll just cover the time for now.
+"LTC" stands for "Linear Timecode" and is used to encode/decode timecode data in an audio signal. Basically you have an audio signal that runs synchronously with the music or the film and in which the timecode is stored as a bit sequence. You can also store the date in a timecode, but I'll just cover the time for now.
 
 ----
 
