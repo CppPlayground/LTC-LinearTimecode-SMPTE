@@ -28,7 +28,7 @@ The time code consists of 8 bytes and a fixed sync word at the end. So 10 bytes 
 
 #### Which byte does what?
 
-Byte    | Bit       | Visuel        | Meaning                    
+Byte    | Bit       | Visual        | Meaning                    
 :---:   |:---:      |:---:          |:---                        
 A       | `0` - `3` | `--:--:--.-X` | Frame number units (0–9)   
 B       | `0` - `3` | `--:--:--.X-` | Frame number tens (0-2)    
